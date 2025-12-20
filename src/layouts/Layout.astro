@@ -4,19 +4,188 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">	</head>
 	<body>
-		<slot />
+		<div class="blobs">
+			<div class="blob"></div>
+			<div class="blob"></div>
+			<div class="blob"></div>
+			<div class="blob"></div>
+			<div class="blob"></div>
+			<div class="blob"></div>
+			<div class="blob"></div>
+		</div>
+		<main>
+			<slot />
+		</main>
+
+
+
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+			<defs>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+					<feBlend in2="goo" in="SourceGraphic" result="mix" />
+				</filter>
+			</defs>
+		</svg>
 	</body>
 </html>
 
-<style>
+<style lang="scss">
+	:root {
+		--body-font: 'Roboto', sans-serif;
+		--heading-font: 'Press Start 2P', cursive;	
+	}
+
 	html,
 	body {
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		font-family: "Roboto", sans-serif;
+		color: var(--copy);
 	}
+	main {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	:root {
+		--bgDark: #000814;
+		--bg: #001d3d;
+		--blob: #002c55;
+		--copy:rgb(236, 236, 236);
+		--link: #ffd60a;
+		--linkHover: #ffc300;
+	}
+	body {
+		background-image: linear-gradient(to right top, #001d3d, #002352, #002867, #002c7c, #142f90);
+	}
+	.blobs {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		filter:url('#goo');
+		overflow: hidden;
+		mix-blend-mode: color-dodge;
+		opacity: 0.15;
+	}
+	.blob {
+		border-radius:100%;
+		width: 45vw;
+		height: 45vw;
+		margin-left:-40px;
+		position:absolute;
+
+		color:white;
+		text-align:center;
+		line-height: 200px;
+		transform:translate3d(0,0,0);
+		transition:transform ease-out 200ms;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: repeat;
+		
+		@media (orientation: portrait) {
+			width: 50vh;
+			height: 50vh;
+		}
+
+		&:nth-child(1) {
+			top: -10vh;
+			left: 55vw; 
+			background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M845 684.5Q713 869 498.5 872T190 687.5Q96 500 176.5 290t298-166.5q217.5 43.5 360 210t10.5 351Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23002c55%22 d=%22M845 684.5Q713 869 498.5 872T190 687.5Q96 500 176.5 290t298-166.5q217.5 43.5 360 210t10.5 351Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+		}
+
+		&:nth-child(2) { 
+			top: 40vh;
+			background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M769.5 619.5q15.5 119.5-103 135t-249 65.5q-130.5 50-230-60T132 516q44-134 143-184t203.5-175.5Q583 31 696.5 135T782 369.5q-28 130.5-12.5 250Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23002c55%22 d=%22M769.5 619.5q15.5 119.5-103 135t-249 65.5q-130.5 50-230-60T132 516q44-134 143-184t203.5-175.5Q583 31 696.5 135T782 369.5q-28 130.5-12.5 250Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+			left: 20vw; 
+		}
+
+		&:nth-child(3) { 
+			top: 75vh;
+			background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M885.5 652.5q-22.5 152.5-168 205T462 833q-110-77-233.5-133T97 497q-8-147 75.5-283.5t238-110q154.5 26.5 312 52t171.5 185q14 159.5-8.5 312Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23002c55%22 d=%22M885.5 652.5q-22.5 152.5-168 205T462 833q-110-77-233.5-133T97 497q-8-147 75.5-283.5t238-110q154.5 26.5 312 52t171.5 185q14 159.5-8.5 312Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+			left: 50vw; 
+		
+		}
+
+		&:nth-child(4) { 
+			top:30vh;
+			left: 80vw; 
+			background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M797.5 605Q710 710 605 821.5T338.5 878Q177 823 226 661.5T238.5 351Q202 202 351 170t295 3q146 35 192.5 181t-41 251Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23002c55%22 d=%22M797.5 605Q710 710 605 821.5T338.5 878Q177 823 226 661.5T238.5 351Q202 202 351 170t295 3q146 35 192.5 181t-41 251Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+		}
+
+		&:nth-child(5) { 
+			top: -5vh;
+			left: -15vw; 
+			background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M872.5 647Q794 794 647 753.5t-315 21Q164 836 124 668t17-319q57-151 208-119.5t296.5 5.5Q791 209 871 354.5t1.5 292.5Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23002c55%22 d=%22M872.5 647Q794 794 647 753.5t-315 21Q164 836 124 668t17-319q57-151 208-119.5t296.5 5.5Q791 209 871 354.5t1.5 292.5Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+		}
+
+		&:nth-child(6) { 
+			top: 65vh;
+			left: -15vw;
+  			background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M808 609.5Q719 719 609.5 856t-224 5Q271 729 204.5 614.5t-34-263q32.5-148.5 181-235t296 1Q795 205 846 352.5t-38 257Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23002c55%22 d=%22M808 609.5Q719 719 609.5 856t-224 5Q271 729 204.5 614.5t-34-263q32.5-148.5 181-235t296 1Q795 205 846 352.5t-38 257Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+		}
+
+		&:nth-child(7) { 
+			top: -10vh;
+			left: 20vw; 
+			background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M862.5 622Q744 744 622 857t-260 16q-138-97-139-235t-16-292q-15-154 139-234.5t245 63Q682 318 831.5 409t31 213Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23002c55%22 d=%22M862.5 622Q744 744 622 857t-260 16q-138-97-139-235t-16-292q-15-154 139-234.5t245 63Q682 318 831.5 409t31 213Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+		}
+        &:nth-child(1) {
+            animation: float 14s ease-in-out infinite;
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2) {
+            animation: float 14.5s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        &:nth-child(3) {
+            animation: float 15s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        &:nth-child(4) {
+            animation: float 15.5s ease-in-out infinite;
+            animation-delay: 1.5s;
+        }
+
+        &:nth-child(5) {
+            animation: float 16s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        &:nth-child(6) {
+            animation: float 16.5s ease-in-out infinite;
+            animation-delay: 2.5s;
+        }
+
+		&:nth-child(7) {
+            animation: float 16.5s ease-in-out infinite;
+            animation-delay: 2.5s;
+        }
+
+	}
+
+	@keyframes float {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-140px) rotate(45deg);
+        }
+    }
 </style>
