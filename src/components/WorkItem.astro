@@ -22,7 +22,7 @@ const backgroundImage = `url('/public/${item.ImageName}')`;
         <h2>{item.ProjectName}</h2>
         <div set:html={item.HTMLContent}></div>
         { item.Url !== "" && 
-            <a href={item.Url} target="_blank" class="btn" rel="noopener noreferrer">Visit Project</a>
+            <a href={item.Url} target="_blank" class="btn" rel="noopener noreferrer">Visit</a>
         }
     </div>
 </div>
@@ -47,6 +47,23 @@ const backgroundImage = `url('/public/${item.ImageName}')`;
         @media screen and (min-width: 768px) {
             flex-direction: row;
             text-align: left;
+        }
+    }
+ 
+    .btn {
+        display: inline-block;
+        transition: 0.2s linear color, 0.2s ease-out transform;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: .75rem;
+        font-family: var(--heading-font);
+        background-color: var(--white);
+        padding: 5px 10px;
+        color: var(--blob);
+
+        &:hover {
+            color: var(--linkHover);
+            transform: scale(1.1);
         }
     }
 
