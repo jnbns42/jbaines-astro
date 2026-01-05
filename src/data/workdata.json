@@ -3,25 +3,25 @@
         {
             "ProjectName": "HSL Chairs",
             "ImageName": "hsl.png",
-            "HTMLContent": "<p>Description here</p>",
+            "HTMLContent": "<p>Umbraco site built with a primarily vanilla JS front end with a sprinkling of Vue for some added interactivity!</p><p>The team at McCann were extremely proud of this project, as we won an Umbraco Award for CMS experience!</p><p>On the front end, I helped integrate Cylindo, a third party service for product visualtion that provides interactive 3D models of their products. Images are provided by them and the UI is built out by myself.</p>",
             "Url": "https://hslchairs.co.uk"
         },
         {
             "ProjectName": "Snacktivity Tracker",
             "ImageName": "warburtons2.png",
-            "HTMLContent": "<p>Description here</p>",
+            "HTMLContent": "<p>Warburtons were about to launch a new product in their protein range, and came to McCann for help promoting the new product.</p><p>The social team came up with the idea of building out a fun navigation web app that directed users to the nearest Warburtons stockist.</p> <p>This was largely a vanilla JS app that hooked into Google Maps, built out in Vite and using web workers to find the nearest location and work out how far from the destination users were. Sadly, no longer live, but this was a fun short project that lasted a few weeks!</p>",
             "Url": ""
         },
         {
             "ProjectName": "Persimmon Homes",
             "ImageName": "phomes.png",
-            "HTMLContent": "<p>Description here</p>",
+            "HTMLContent": "<p>Persimmon Homes is a UK-based housing developer and property company. I worked on their website, which was built using Umbraco CMS and a front end build that we inherited from a previous agency.</p><p>This was a tough project with a tight budget, but we were able to turn it around and produce a site the client was very happy with!</p><p>The site makes use of Bootstrap, and mostly Vanilla JS, with some Preact.</p>",
             "Url": "https://www.persimmonhomes.com/"
         },
         {
             "ProjectName": "CrossCountry Trains",
             "ImageName": "xc.png",
-            "HTMLContent": "<p>Description here</p>",
+            "HTMLContent": "<p>This site unfortunately moved away from McCann, but was probablyt my biggest project during my time at McCann Manchester.</p><p>The client was very passionate about making sure the site was accessible by all, and I often worked alongside a third party agency to gather feedback and make improvements.</p><p>The site was originally built out with jQuery, but I was able to progressively enhance parts of the site with vanilla JS, and make use of Lit to build reusable web components for functionality such as station search. This project made me incredibly excited about web components!</p>",
             "Url": ""
         }
     ]
