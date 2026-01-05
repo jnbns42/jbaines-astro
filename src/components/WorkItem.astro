@@ -9,16 +9,14 @@ interface WorkItem {
 
 const props = Astro.props;
 const item: WorkItem = props.item;
-
-const backgroundImage = `url(/src/assets/${item.ImageName})`;
-
+const backgroundImage = `url('/public/${item.ImageName}')`;
 ---
 
 <div class="work-item">
     <div class="work-blob">
         <div class="work-blob__background-blob-1"></div>
         <div class="work-blob__background-blob-2"></div>
-        <div class="work-blob__main-blob" style=`background-image: url(/src/assets/${item.ImageName})`></div>
+        <div class="work-blob__main-blob"></div>
     </div>
     <div>
         <h2>{item.ProjectName}</h2>
