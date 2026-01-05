@@ -20,6 +20,10 @@ const backgroundImage = `url('/public/${item.ImageName}')`;
     </div>
     <div>
         <h2>{item.ProjectName}</h2>
+        <div set:html={item.HTMLContent}></div>
+        { item.Url !== "" && 
+            <a href={item.Url} target="_blank" class="btn" rel="noopener noreferrer">Visit Project</a>
+        }
     </div>
 </div>
 
