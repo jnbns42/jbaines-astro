@@ -1,0 +1,32 @@
+<nav>
+    <ul>
+        <li><a href="/work">Work</a></li>
+    </ul>
+</nav>
+
+<style lang="scss">
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    a {
+        color: var(--link);
+        display: inline-block;
+        transition: 0.2s linear color, 0.2s ease-out transform;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.25rem;
+        font-family: var(--heading-font);
+        background-color: var(--white);
+        padding: 5px 10px;
+        color: var(--blob);
+        &:hover {
+            color: var(--linkHover);
+            transform: scale(1.1);
+        }
+    }
+</style>

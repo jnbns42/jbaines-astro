@@ -1,12 +1,18 @@
+---
+import { ClientRouter } from "astro:transitions";
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:name="root"  transition:animate="none">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">	</head>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<ClientRouter />
+	</head>
 	<body>
 		<div class="blobs">
 			<div class="blob"></div>
@@ -59,6 +65,7 @@
 	}
 
 	:root {
+		--white: #ffffff;
 		--bgDark: #000814;
 		--bg: #001d3d;
 		--blob: #002c55;
