@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+            "ProjectName": "HSL Chairs",
+            "ImageName": "hsl.png",
+            "HTMLContent": "<p>Description here</p>",
+            "Url": "https://hslchairs.co.uk"
+        },
+        {
+            "ProjectName": "Snacktivity Tracker",
+            "ImageName": "warburtons2.png",
+            "HTMLContent": "<p>Description here</p>",
+            "Url": ""
+        },
+        {
+            "ProjectName": "Persimmon Homes",
+            "ImageName": "phomes.png",
+            "HTMLContent": "<p>Description here</p>",
+            "Url": "https://www.persimmonhomes.com/"
+        },
+        {
+            "ProjectName": "CrossCountry Trains",
+            "ImageName": "xc.jpeg",
+            "HTMLContent": "<p>Description here</p>",
+            "Url": ""
+        }
+    ]
+}

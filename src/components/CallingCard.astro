@@ -11,6 +11,7 @@ import Nav from './Nav.astro';
   </div>
   <div class="calling-card__info" transition:name="header">
     <h1>Jonathan Baines</h1>
+    <h2>Front End Developer</h2>
     <Nav/>
     <LinkedIn />
   </div>
@@ -18,9 +19,13 @@ import Nav from './Nav.astro';
 
 
 <style lang="scss">
-  h1 {
+  h1, h2 {
     font-family: var(--heading-font);
     margin: 0;
+  }
+
+  h2 {
+    font-size: 1.05rem;
   }
 
   .calling-card {
