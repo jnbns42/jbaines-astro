@@ -9,7 +9,7 @@ interface WorkItem {
 
 const props = Astro.props;
 const item: WorkItem = props.item;
-const backgroundImage = `url('/public/${item.ImageName}')`;
+const backgroundImage = `url('/${item.ImageName}')`;
 ---
 
 <div class="work-item">
