@@ -21,7 +21,7 @@
         {
             "ProjectName": "CrossCountry Trains",
             "ImageName": "xc.png",
-            "HTMLContent": "<p>This site unfortunately moved away from McCann, but was probablyt my biggest project during my time at McCann Manchester.</p><p>The client was very passionate about making sure the site was accessible by all, and I often worked alongside a third party agency to gather feedback and make improvements.</p><p>The site was originally built out with jQuery, but I was able to progressively enhance parts of the site with vanilla JS, and make use of Lit to build reusable web components for functionality such as station search. This project made me incredibly excited about web components!</p>",
+            "HTMLContent": "<p>This site unfortunately moved away from McCann, but was probably my biggest project during my time at McCann Manchester.</p><p>The client was very passionate about making sure the site was accessible by all, and I often worked alongside a third party agency to gather feedback and make improvements.</p><p>The site was originally built out with jQuery, but I was able to progressively enhance parts of the site with vanilla JS, and make use of Lit to build reusable web components for functionality such as station search. This project made me incredibly excited about web components!</p>",
             "Url": ""
         }
     ]
